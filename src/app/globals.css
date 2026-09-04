@@ -1,26 +1,188 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Warm Scrapbook Minimal — tokens from DESIGN.md frontmatter */
+@theme inline {
+  --color-background: var(--surface);
+  --color-foreground: var(--on-surface);
+  --font-sans: var(--font-jakarta);
+  --font-serif: var(--font-playfair);
+  --font-display: var(--font-playfair);
+  --font-heading: var(--font-playfair);
+  --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-primary-foreground: var(--on-primary);
+
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-secondary-foreground: var(--on-secondary);
+
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary: var(--on-tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+
+  --color-surface: var(--surface);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-inverse-surface: var(--inverse-surface);
+  --color-inverse-on-surface: var(--inverse-on-surface);
+  --color-inverse-primary: var(--inverse-primary);
+
+  --color-accent-gold: var(--accent-gold);
+  --color-accent-blush: var(--accent-blush);
+
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+  --color-error-container: var(--error-container);
+  --color-on-error-container: var(--on-error-container);
+  --color-destructive: var(--error);
+  --color-destructive-foreground: var(--on-error);
+
+  --color-card: var(--surface-container-lowest);
+  --color-card-foreground: var(--on-surface);
+  --color-popover: var(--surface-container-lowest);
+  --color-popover-foreground: var(--on-surface);
+  --color-muted: var(--surface-container);
+  --color-muted-foreground: var(--on-surface-variant);
+  --color-accent: var(--accent-blush);
+  --color-accent-foreground: var(--on-surface);
+  --color-border: var(--outline-variant);
+  --color-input: var(--outline-variant);
+  --color-ring: var(--primary);
+
+  --color-sidebar: var(--surface);
+  --color-sidebar-foreground: var(--on-surface);
+  --color-sidebar-primary: var(--primary);
+  --color-sidebar-primary-foreground: var(--on-primary);
+  --color-sidebar-accent: var(--surface-container);
+  --color-sidebar-accent-foreground: var(--on-surface);
+  --color-sidebar-border: var(--outline-variant);
+  --color-sidebar-ring: var(--primary);
+
+  --color-chart-1: var(--primary);
+  --color-chart-2: var(--secondary);
+  --color-chart-3: var(--accent-gold);
+  --color-chart-4: var(--accent-blush);
+  --color-chart-5: var(--tertiary);
+
+  --shadow-paper-1: var(--elevation-1);
+  --shadow-paper-2: var(--elevation-2);
+  --shadow-paper-3: var(--elevation-3);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  --text-display-lg: 3.5rem;
+  --text-headline-lg: 2rem;
+  --text-headline-md: 1.5rem;
+  --text-headline-sm: 1.25rem;
+  --text-title-md: 1.125rem;
+  --text-body-lg: 1.0625rem;
+  --text-body-md: 0.9375rem;
+  --text-label-md: 0.8125rem;
+  --text-label-sm: 0.6875rem;
+
+  --max-width-column: 480px;
+  --max-width-notebook-page: 440px;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #994126;
+  --on-primary: #ffffff;
+  --primary-container: #ffdbcf;
+  --on-primary-container: #3b0900;
+  --secondary: #5c6b4a;
+  --on-secondary: #ffffff;
+  --secondary-container: #e0e8d4;
+  --on-secondary-container: #171e0f;
+  --tertiary: #7a5c3e;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #f5dfc4;
+  --on-tertiary-container: #2b1700;
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #410002;
+  --surface: #fff8f5;
+  --surface-dim: #e0d8d4;
+  --surface-bright: #fff8f5;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #faf2ee;
+  --surface-container: #f4ece8;
+  --surface-container-high: #eee6e2;
+  --surface-container-highest: #e9e1dd;
+  --on-surface: #1c1412;
+  --on-surface-variant: #53433e;
+  --outline: #85736d;
+  --outline-variant: #d8c2bb;
+  --inverse-surface: #312825;
+  --inverse-on-surface: #fbefea;
+  --inverse-primary: #ffb59a;
+  --accent-gold: #d4af77;
+  --accent-blush: #e8b49b;
+  --scrim: #000000;
+  --shadow: #000000;
+
+  --elevation-1: 0 1px 2px rgba(28, 20, 18, 0.05), 0 1px 3px rgba(153, 65, 38, 0.04);
+  --elevation-2: 0 2px 6px rgba(28, 20, 18, 0.06), 0 4px 12px rgba(153, 65, 38, 0.06);
+  --elevation-3: 0 6px 16px rgba(28, 20, 18, 0.08), 0 12px 28px rgba(153, 65, 38, 0.08);
+
+  --background: var(--surface);
+  --foreground: var(--on-surface);
+  --radius: 0.75rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+  html {
+    @apply font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  .font-serif,
+  .font-display {
+    font-family: var(--font-playfair), ui-serif, Georgia, serif;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
