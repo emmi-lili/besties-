@@ -6,10 +6,11 @@ description: >
   cápsulas y memoria. El frontmatter es la fuente compilada; la prosa aclara
   intención. Ante conflicto de valores, gana el frontmatter.
 colors:
-  primary: "#994126"
-  on-primary: "#FFFFFF"
-  primary-container: "#FFDBCF"
-  on-primary-container: "#3B0900"
+--primary: #c45c7a;
+--on-primary: #ffffff;
+--primary-container: #ffd9e4;
+--on-primary-container: #3b0014;
+--inverse-primary: #ffb1c8;
   secondary: "#5C6B4A"
   on-secondary: "#FFFFFF"
   secondary-container: "#E0E8D4"
