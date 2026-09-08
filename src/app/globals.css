@@ -112,10 +112,11 @@
 }
 
 :root {
-  --primary: #994126;
+  --primary: #c45c7a;
   --on-primary: #ffffff;
-  --primary-container: #ffdbcf;
-  --on-primary-container: #3b0900;
+  --primary-container: #ffd9e4;
+  --on-primary-container: #3b0014;
+  --inverse-primary: #ffb1c8;
   --secondary: #5c6b4a;
   --on-secondary: #ffffff;
   --secondary-container: #e0e8d4;
