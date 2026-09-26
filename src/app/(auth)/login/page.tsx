@@ -28,11 +28,11 @@ export default async function LoginPage() {
 
         <div className="animate-fade-in-up stagger-1 space-y-2 pt-2">
           <h1 className="font-display text-headline-lg text-ink">
-            Bienvenida de vuelta
+            ¡Hola, bestie! 👋
           </h1>
           <p className="flex items-center gap-1.5 text-body-md text-muted-foreground">
             <Heart className="size-4 text-primary/60" />
-            Tu círculo te espera. O al menos el feed.
+            Tu espacio con tu bestie te espera.
           </p>
         </div>
       </div>

@@ -27,11 +27,11 @@ export default async function RegistroPage() {
 
         <div className="animate-fade-in-up stagger-1 space-y-2 pt-2">
           <h1 className="font-display text-headline-lg text-ink">
-            Creá tu cuenta
+            ¡Unite, bestie! 🎉
           </h1>
           <p className="flex items-center gap-1.5 text-body-md text-muted-foreground">
             <Gamepad2 className="size-4 text-secondary/70" />
-            Primero la cuenta. Después armamos tu perfil jugando.
+            Creá tu cuenta y empezá la diversión con tu bestie.
           </p>
         </div>
       </div>

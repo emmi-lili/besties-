@@ -22,9 +22,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: `${APP_NAME} — amigas de verdad`,
+  title: `${APP_NAME} — App de besties`,
   description:
-    "Hacer amigas de grande es rarísimo. Acá no. Match jugando, no mirando fotos.",
+    "App de besties ADY Y EMMI. Un espacio para conectar, jugar y ser nosotras mismas 💕",
 }
 
 export default function RootLayout({
