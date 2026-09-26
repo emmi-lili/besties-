@@ -1,5 +1,5 @@
-/** Nombre de trabajo — cambiar acá cuando haya nombre definitivo. */
-export const APP_NAME = "Amiguis"
+/** App de besties para Ady y Emmi 💕 */
+export const APP_NAME = "Ady & Emmi"
 
 export const DB_STORAGE_KEY = "amiguis:db"
 
