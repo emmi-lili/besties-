@@ -28,12 +28,12 @@ export function InterestChip({
       disabled={disabled}
       onClick={onClick}
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-caption transition-colors",
-        shared && "border-forest bg-forest/10 text-forest",
-        selected && !shared && "border-tomato bg-tomato/10 text-tomato",
+        "inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-label-md transition-colors",
+        shared && "border-secondary bg-secondary/10 text-secondary",
+        selected && !shared && "border-primary bg-primary/10 text-primary",
         !selected &&
           !shared &&
-          "border-border bg-white text-ink hover:border-ink/30",
+          "border-border bg-white text-on-surface hover:border-ink/30",
         interactive && "cursor-pointer",
         disabled && "opacity-50",
       )}

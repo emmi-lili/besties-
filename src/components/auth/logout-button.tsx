@@ -18,7 +18,7 @@ export function LogoutButton({
       disabled={isPending}
       onClick={() => execute()}
     >
-      {isPending ? "Saliendo…" : "Cerrar sesión"}
+      {isPending ? "Saliendo…" : "Salir"}
     </Button>
   )
 }

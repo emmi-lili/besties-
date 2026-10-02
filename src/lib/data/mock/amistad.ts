@@ -41,6 +41,8 @@ function toPublicCapsula(
   adjuntos: CapsulaAdjuntoRecord[],
   viewerProfileId: string,
 ): Capsula {
+  // Regla: contenido solo tras open() en servidor (desbloqueadaAt).
+  // Listados y getById bloqueados siempre traen contenido: null.
   const unlocked = Boolean(record.desbloqueadaAt)
   const isParticipant =
     record.autorProfileId === viewerProfileId ||
@@ -527,5 +529,14 @@ export const milestones: MilestoneRepository = {
       db.hitos.push(hito)
     })
     return hito!
+  },
+}
+
+export const insigniasCatalog = {
+  async listAll() {
+    return getDb().insignias
+  },
+  async listForProfile(profileId: string) {
+    return getDb().insigniasUsuario.filter((i) => i.profileId === profileId)
   },
 }

@@ -11,7 +11,7 @@ export default function AuthLayout({
       <header className="px-5 pt-6">
         <Link
           href="/"
-          className="font-display text-h3 tracking-tight text-ink"
+          className="font-display text-headline-sm tracking-tight text-on-surface"
         >
           {APP_NAME}
         </Link>

@@ -523,6 +523,15 @@ const safety: SafetyRepository = {
   },
 }
 
+import {
+  capsules,
+  diary,
+  friendships,
+  insigniasCatalog,
+  milestones,
+  places,
+} from "./amistad"
+
 export const mockDataLayer: DataLayer = {
   users,
   profiles,
@@ -531,4 +540,10 @@ export const mockDataLayer: DataLayer = {
   messages,
   challenges,
   safety,
+  friendships,
+  capsules,
+  diary,
+  places,
+  milestones,
+  insignias: insigniasCatalog,
 }

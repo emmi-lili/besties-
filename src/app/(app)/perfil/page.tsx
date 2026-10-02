@@ -11,9 +11,9 @@ export default async function PerfilPage() {
         title="Tu perfil"
         phase="Fase 3+"
         detail={
-          auth
-            ? `Sesión activa: ${auth.user.email}. El preview completo llega con el onboarding.`
-            : "Sin sesión."
+          auth?.profile
+            ? `Estás adentro como ${auth.profile.nombre}. El preview completo llega con el onboarding.`
+            : "El preview completo llega con el onboarding."
         }
       />
       <div className="mt-4">

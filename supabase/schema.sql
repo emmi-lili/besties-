@@ -174,3 +174,99 @@ create table bloqueos (
 -- bloqueos / reportes: INSERT propio; bloqueos SELECT propio.
 -- retos: lectura pública autenticada; retos_usuario solo propio en escritura.
 -- respuestas_juego / respuestas_prompt: escritura propia; lectura en contexto de match.
+
+-- === Capa privada (amistad oficial) ===
+
+create table amistades (
+  id uuid primary key default gen_random_uuid(),
+  profile_a uuid not null references profiles (id) on delete cascade,
+  profile_b uuid not null references profiles (id) on delete cascade,
+  oficial_desde timestamptz,
+  estado text not null check (estado in ('propuesta', 'oficial', 'disuelta')),
+  propuesta_por uuid not null references profiles (id),
+  match_id uuid references matches (id),
+  created_at timestamptz not null default now(),
+  unique (profile_a, profile_b),
+  check (profile_a < profile_b)
+);
+
+create table capsulas (
+  id uuid primary key default gen_random_uuid(),
+  amistad_id uuid not null references amistades (id) on delete cascade,
+  autor uuid not null references profiles (id),
+  destinatario uuid not null references profiles (id),
+  titulo text not null,
+  tipo text not null check (tipo in ('fecha', 'evento', 'necesidad', 'emergencia')),
+  condicion jsonb,
+  contenido text, -- TODO: cifrado E2E → contenido_cifrado bytea
+  escrita_at timestamptz not null default now(),
+  desbloqueada_at timestamptz,
+  leida_at timestamptz,
+  reaccion text
+);
+
+-- Una sola cápsula de emergencia por amistad y remitente
+create unique index capsulas_emergencia_unica
+  on capsulas (amistad_id, autor)
+  where tipo = 'emergencia';
+
+create table capsula_adjuntos (
+  id uuid primary key default gen_random_uuid(),
+  capsula_id uuid not null references capsulas (id) on delete cascade,
+  tipo text not null,
+  url text not null,
+  duracion_seg int,
+  metadata jsonb not null default '{}'
+);
+
+create table entradas_diario (
+  id uuid primary key default gen_random_uuid(),
+  amistad_id uuid not null references amistades (id) on delete cascade,
+  autor uuid not null references profiles (id),
+  tipo text not null,
+  contenido text not null,
+  media_url text,
+  lugar_id uuid,
+  created_at timestamptz not null default now()
+);
+
+create table estampillas (
+  id uuid primary key default gen_random_uuid(),
+  entrada_id uuid not null references entradas_diario (id) on delete cascade,
+  autor uuid not null references profiles (id),
+  slug text not null,
+  rotacion numeric not null default 0
+);
+
+create table lugares (
+  id uuid primary key default gen_random_uuid(),
+  amistad_id uuid not null references amistades (id) on delete cascade,
+  nombre text not null,
+  ciudad text not null,
+  lat double precision,
+  lng double precision,
+  estado text not null check (estado in ('visitado', 'pendiente')),
+  visitado_at timestamptz,
+  propuesto_por uuid not null references profiles (id),
+  foto_url text,
+  linea text
+);
+
+alter table entradas_diario
+  add constraint entradas_diario_lugar_fk
+  foreign key (lugar_id) references lugares (id) on delete set null;
+
+create table hitos (
+  id uuid primary key default gen_random_uuid(),
+  amistad_id uuid not null references amistades (id) on delete cascade,
+  tipo text not null,
+  payload jsonb not null default '{}',
+  ocurrio_at timestamptz not null default now()
+);
+
+-- Vista / función: nunca exponer contenido bloqueado
+-- create function capsulas_para_viewer(...) ... security definer
+-- select sin contenido cuando desbloqueada_at is null y condición no cumplida
+
+-- RLS: amistades / capsulas / diario / lugares / hitos solo si profile de auth es miembro.
+-- capsulas.contenido: preferir vista que lo nulifica hasta desbloqueo.

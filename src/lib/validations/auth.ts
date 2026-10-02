@@ -26,3 +26,7 @@ export const loginSchema = z.object({
   email: emailSchema,
   password: z.string().min(1, "Ingresá tu contraseña"),
 })
+
+export const accessCodeSchema = z.object({
+  code: z.string().trim().min(1, "Ingresá el código").max(8),
+})

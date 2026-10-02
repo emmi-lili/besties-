@@ -6,7 +6,11 @@ import {
   returnValidationErrors,
 } from "next-safe-action"
 import { actionClient } from "@/lib/safe-action"
-import { loginSchema, registerSchema } from "@/lib/validations/auth"
+import {
+  accessCodeSchema,
+  loginSchema,
+  registerSchema,
+} from "@/lib/validations/auth"
 import { getDataLayer } from "@/lib/data"
 import { hashPassword, verifyPassword } from "@/lib/auth/password"
 import {
@@ -14,6 +18,52 @@ import {
   destroySession,
   getSession,
 } from "@/lib/auth/session"
+
+const ACCESS_CODE = "1234"
+const GATE_EMAIL = "emmi@local.amiguis"
+
+async function ensureGateUser() {
+  const data = getDataLayer()
+  let user = await data.users.findByEmail(GATE_EMAIL)
+  if (!user) {
+    user = await data.users.create({
+      email: GATE_EMAIL,
+      passwordHash: "code-gate",
+    })
+  }
+
+  const profile = await data.profiles.getByUserId(user.id)
+  if (!profile?.onboardingCompleto) {
+    await data.profiles.upsert(user.id, {
+      nombre: "Emmi",
+      edad: 28,
+      ciudad: "La Paz",
+      barrio: "Sopocachi",
+      bio: "",
+      fotos: [],
+      energiaSocial: 50,
+      disponibilidad: ["findes"],
+      interesIds: ["i-cafe", "i-leer", "i-caminar"],
+      onboardingCompleto: true,
+    })
+  }
+
+  return user
+}
+
+export const enterWithCodeAction = actionClient
+  .inputSchema(accessCodeSchema)
+  .action(async ({ parsedInput }) => {
+    if (parsedInput.code !== ACCESS_CODE) {
+      returnServerError("Código incorrecto")
+    }
+
+    const data = getDataLayer()
+    const user = await ensureGateUser()
+    await data.users.touchLastLogin(user.id)
+    await createSession(user.id)
+    redirect("/descubrir")
+  })
 
 export const registerAction = actionClient
   .inputSchema(registerSchema)

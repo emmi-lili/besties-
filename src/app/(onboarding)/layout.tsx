@@ -15,7 +15,7 @@ export default async function OnboardingLayout({
   return (
     <div className="flex min-h-full flex-1 flex-col">
       <header className="px-5 pt-6">
-        <Link href="/" className="font-display text-h3 tracking-tight text-ink">
+        <Link href="/" className="font-display text-headline-sm tracking-tight text-on-surface">
           {APP_NAME}
         </Link>
       </header>

@@ -27,4 +27,10 @@ export const supabaseDataLayer: DataLayer = {
   messages: stubRepo("messages"),
   challenges: stubRepo("challenges"),
   safety: stubRepo("safety"),
+  friendships: stubRepo("friendships"),
+  capsules: stubRepo("capsules"),
+  diary: stubRepo("diary"),
+  places: stubRepo("places"),
+  milestones: stubRepo("milestones"),
+  insignias: stubRepo("insignias"),
 }

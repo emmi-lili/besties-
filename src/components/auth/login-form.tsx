@@ -1,21 +1,21 @@
 "use client"
 
 import { useAction } from "next-safe-action/hooks"
-import { loginAction } from "@/actions/auth"
+import { enterWithCodeAction } from "@/actions/auth"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
 export function LoginForm() {
-  const { execute, result, isPending, hasErrored } = useAction(loginAction)
+  const { execute, result, isPending, hasErrored } = useAction(enterWithCodeAction)
 
   const fieldErrors = result.validationErrors
-  const emailError =
+  const codeError =
     fieldErrors &&
-    "email" in fieldErrors &&
-    fieldErrors.email &&
-    "_errors" in fieldErrors.email
-      ? fieldErrors.email._errors?.[0]
+    "code" in fieldErrors &&
+    fieldErrors.code &&
+    "_errors" in fieldErrors.code
+      ? fieldErrors.code._errors?.[0]
       : undefined
 
   return (
@@ -25,43 +25,33 @@ export function LoginForm() {
         e.preventDefault()
         const fd = new FormData(e.currentTarget)
         execute({
-          email: String(fd.get("email") ?? ""),
-          password: String(fd.get("password") ?? ""),
+          code: String(fd.get("code") ?? ""),
         })
       }}
     >
       <div className="space-y-2">
-        <Label htmlFor="email">Correo</Label>
+        <Label htmlFor="code">Código</Label>
         <Input
-          id="email"
-          name="email"
-          type="email"
-          autoComplete="email"
+          id="code"
+          name="code"
+          type="password"
+          inputMode="numeric"
+          autoComplete="off"
+          autoFocus
           required
-          className="h-11"
-          aria-invalid={Boolean(emailError)}
+          maxLength={8}
+          className="h-11 tracking-[0.4em]"
+          aria-invalid={Boolean(codeError)}
         />
-        {emailError ? (
-          <p className="text-caption text-destructive" role="alert">
-            {emailError}
+        {codeError ? (
+          <p className="text-label-md text-destructive" role="alert">
+            {codeError}
           </p>
         ) : null}
       </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="password">Contraseña</Label>
-        <Input
-          id="password"
-          name="password"
-          type="password"
-          autoComplete="current-password"
-          required
-          className="h-11"
-        />
-      </div>
-
       {hasErrored && result.serverError ? (
-        <p className="text-caption text-destructive" role="alert">
+        <p className="text-label-md text-destructive" role="alert">
           {result.serverError}
         </p>
       ) : null}

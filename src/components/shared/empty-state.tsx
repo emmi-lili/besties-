@@ -23,9 +23,9 @@ export function EmptyState({
         className,
       )}
     >
-      <h2 className="font-display text-h2 leading-tight text-ink">{title}</h2>
+      <h2 className="font-display text-headline-md leading-tight text-on-surface">{title}</h2>
       {description ? (
-        <p className="max-w-sm text-body text-muted-foreground">{description}</p>
+        <p className="max-w-sm text-body-md text-muted-foreground">{description}</p>
       ) : null}
       {actionLabel && onAction ? (
         <Button type="button" onClick={onAction} className="mt-2">

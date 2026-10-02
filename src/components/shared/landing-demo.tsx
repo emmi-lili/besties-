@@ -27,7 +27,7 @@ export function LandingDemo() {
     }
     window.setTimeout(
       () => {
-        router.push("/registro")
+        router.push("/login")
       },
       reduceMotion ? 0 : 450,
     )
@@ -35,12 +35,12 @@ export function LandingDemo() {
 
   return (
     <div className="space-y-4">
-      <p className="text-caption font-medium text-ink/60">Probá Esto o Esto</p>
+      <p className="text-label-md font-medium text-on-surface/60">Probá Esto o Esto</p>
       <motion.div
         layout
         className="rounded-2xl border border-border bg-white p-5 shadow-[0_12px_40px_-24px_rgba(28,25,23,0.35)]"
       >
-        <p className="font-display text-h2 leading-snug text-ink">
+        <p className="font-display text-headline-md leading-snug text-on-surface">
           Café a las 7am o vino a las 11pm?
         </p>
         <div className="mt-6 grid gap-3">
@@ -48,7 +48,7 @@ export function LandingDemo() {
             type="button"
             size="lg"
             variant={picked === "a" ? "default" : "outline"}
-            className="h-12 justify-start px-4 text-left font-display text-body"
+            className="h-12 justify-start px-4 text-left font-display text-body-md"
             onClick={() => choose("a")}
             disabled={picked !== null}
           >
@@ -58,7 +58,7 @@ export function LandingDemo() {
             type="button"
             size="lg"
             variant={picked === "b" ? "default" : "outline"}
-            className="h-12 justify-start px-4 text-left font-display text-body"
+            className="h-12 justify-start px-4 text-left font-display text-body-md"
             onClick={() => choose("b")}
             disabled={picked !== null}
           >

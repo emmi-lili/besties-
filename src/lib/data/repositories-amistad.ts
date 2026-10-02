@@ -8,6 +8,7 @@ import type {
   Hito,
   Lugar,
 } from "./types-amistad"
+import type { Insignia, InsigniaUsuario } from "./types"
 
 export interface FriendshipRepository {
   propose(matchId: string, fromProfileId: string): Promise<Amistad>
@@ -74,4 +75,9 @@ export interface PlaceRepository {
 export interface MilestoneRepository {
   list(amistadId: string): Promise<Hito[]>
   add(input: Omit<Hito, "id">): Promise<Hito>
+}
+
+export interface InsigniaCatalogRepository {
+  listAll(): Promise<Insignia[]>
+  listForProfile(profileId: string): Promise<InsigniaUsuario[]>
 }

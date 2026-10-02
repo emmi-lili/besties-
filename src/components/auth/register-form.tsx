@@ -66,7 +66,7 @@ export function RegisterForm() {
           aria-invalid={Boolean(emailError)}
         />
         {emailError ? (
-          <p className="text-caption text-destructive" role="alert">
+          <p className="text-label-md text-destructive" role="alert">
             {emailError}
             {emailTaken ? (
               <>
@@ -105,26 +105,26 @@ export function RegisterForm() {
                       ? strength.score <= 1
                         ? "bg-destructive"
                         : strength.score === 2
-                          ? "bg-mustard"
-                          : "bg-forest"
+                          ? "bg-accent-gold"
+                          : "bg-secondary"
                       : "bg-border",
                   )}
                 />
               ))}
             </div>
             {strength.label ? (
-              <p className="text-micro text-muted-foreground">
+              <p className="text-label-sm text-muted-foreground">
                 Fuerza: {strength.label}
               </p>
             ) : null}
           </div>
         ) : null}
         {passwordError ? (
-          <p className="text-caption text-destructive" role="alert">
+          <p className="text-label-md text-destructive" role="alert">
             {passwordError}
           </p>
         ) : (
-          <p className="text-micro text-muted-foreground">
+          <p className="text-label-sm text-muted-foreground">
             Mínimo 8 caracteres y un número.
           </p>
         )}
@@ -142,14 +142,14 @@ export function RegisterForm() {
           aria-invalid={Boolean(confirmError)}
         />
         {confirmError ? (
-          <p className="text-caption text-destructive" role="alert">
+          <p className="text-label-md text-destructive" role="alert">
             {confirmError}
           </p>
         ) : null}
       </div>
 
       {hasErrored && result.serverError ? (
-        <p className="text-caption text-destructive" role="alert">
+        <p className="text-label-md text-destructive" role="alert">
           {result.serverError}
         </p>
       ) : null}

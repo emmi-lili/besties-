@@ -12,7 +12,7 @@ export default function LandingPage() {
       />
       <div className="relative mx-auto flex w-full max-w-lg flex-1 flex-col justify-between px-5 pb-10 pt-8">
         <header className="flex items-center justify-between">
-          <p className="font-display text-h3 tracking-tight text-ink">
+          <p className="font-display text-headline-sm tracking-tight text-on-surface">
             {APP_NAME}
           </p>
           <Button asChild variant="ghost" size="sm">
@@ -22,10 +22,10 @@ export default function LandingPage() {
 
         <div className="flex flex-1 flex-col justify-center gap-8 py-10">
           <div className="space-y-3">
-            <h1 className="font-display text-display leading-[1.05] text-ink">
+            <h1 className="font-display text-display-lg leading-[1.05] text-on-surface">
               Hacer amigas de grande es rarísimo. Acá no.
             </h1>
-            <p className="max-w-sm text-body text-muted-foreground">
+            <p className="max-w-sm text-body-md text-muted-foreground">
               No matcheás mirando una foto. Matcheás jugando.
             </p>
           </div>
@@ -33,8 +33,8 @@ export default function LandingPage() {
           <LandingDemo />
         </div>
 
-        <p className="text-center text-micro text-muted-foreground">
-          Respondé y arrancá. Sin cuenta no hay match.
+        <p className="text-center text-label-sm text-muted-foreground">
+          Respondé y arrancá. El código te deja entrar.
         </p>
       </div>
     </main>

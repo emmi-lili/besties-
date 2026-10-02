@@ -99,22 +99,13 @@ export interface SafetyRepository {
 }
 
 import type {
-  ChallengeRepository,
-  DataLayer,
-  GameRepository,
-  MatchRepository,
-  MessageRepository,
-  ProfileRepository,
-  SafetyRepository,
-  UserRepository,
-} from "../repositories"
-import type {
   CapsuleRepository,
   DiaryRepository,
   FriendshipRepository,
+  InsigniaCatalogRepository,
   MilestoneRepository,
   PlaceRepository,
-} from "../repositories-amistad"
+} from "./repositories-amistad"
 
 export interface DataLayer {
   users: UserRepository
@@ -129,4 +120,5 @@ export interface DataLayer {
   diary: DiaryRepository
   places: PlaceRepository
   milestones: MilestoneRepository
+  insignias: InsigniaCatalogRepository
 }
