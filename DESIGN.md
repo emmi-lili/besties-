@@ -1,53 +1,53 @@
 ---
-name: Warm Scrapbook Minimal
+name: Baby Blue Theme
 colors:
-  surface: '#fff8f5'
-  surface-dim: '#e1d8d4'
-  surface-bright: '#fff8f5'
+  surface: '#F5FAFF'
+  surface-dim: '#D8E8F5'
+  surface-bright: '#F5FAFF'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#fbf2ed'
-  surface-container: '#f5ece7'
-  surface-container-high: '#efe6e2'
-  surface-container-highest: '#e9e1dc'
-  on-surface: '#1e1b18'
-  on-surface-variant: '#56423d'
-  inverse-surface: '#34302c'
-  inverse-on-surface: '#f8efea'
-  outline: '#89726c'
-  outline-variant: '#dcc1b9'
-  surface-tint: '#9c4328'
-  primary: '#c45c7a'
+  surface-container-low: '#EEF6FC'
+  surface-container: '#E5F1FA'
+  surface-container-high: '#DCE9F5'
+  surface-container-highest: '#D3E3F0'
+  on-surface: '#0D2137'
+  on-surface-variant: '#3D5875'
+  inverse-surface: '#1E3A52'
+  inverse-on-surface: '#E5F1FA'
+  outline: '#6B8DAD'
+  outline-variant: '#B4CEDF'
+  surface-tint: '#5B9BD5'
+  primary: '#7EB8E1'
   on-primary: '#ffffff'
-  primary-container: '#ffd9e4'
-  on-primary-container: '#3b0014'
-  inverse-primary: '#ffb1c8'
-  secondary: '#4b6455'
+  primary-container: '#D4EAFC'
+  on-primary-container: '#0A3055'
+  inverse-primary: '#A8D0F2'
+  secondary: '#6AA8D8'
   on-secondary: '#ffffff'
-  secondary-container: '#cae6d4'
-  on-secondary-container: '#4f6859'
-  tertiary: '#745727'
+  secondary-container: '#C8E4F7'
+  on-secondary-container: '#0D4A7C'
+  tertiary: '#5B9BD5'
   on-tertiary: '#ffffff'
-  tertiary-container: '#8f6f3d'
-  on-tertiary-container: '#fffbff'
+  tertiary-container: '#A8D0F2'
+  on-tertiary-container: '#0D3A5C'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
-  primary-fixed: '#ffdbd1'
-  primary-fixed-dim: '#ffb59f'
-  on-primary-fixed: '#3a0a00'
-  on-primary-fixed-variant: '#7d2c13'
-  secondary-fixed: '#cde9d6'
-  secondary-fixed-dim: '#b1cdbb'
-  on-secondary-fixed: '#072014'
-  on-secondary-fixed-variant: '#344c3e'
-  tertiary-fixed: '#ffdeae'
-  tertiary-fixed-dim: '#e7c187'
-  on-tertiary-fixed: '#281900'
-  on-tertiary-fixed-variant: '#5c4214'
-  background: '#fff8f5'
-  on-background: '#1e1b18'
-  surface-variant: '#e9e1dc'
+  primary-fixed: '#D4EAFC'
+  primary-fixed-dim: '#A8D0F2'
+  on-primary-fixed: '#0A3055'
+  on-primary-fixed-variant: '#1E5A8F'
+  secondary-fixed: '#C8E4F7'
+  secondary-fixed-dim: '#9CCAE8'
+  on-secondary-fixed: '#0D4A7C'
+  on-secondary-fixed-variant: '#2A6699'
+  tertiary-fixed: '#A8D0F2'
+  tertiary-fixed-dim: '#7BBCE5'
+  on-tertiary-fixed: '#0D3A5C'
+  on-tertiary-fixed-variant: '#3A7CAE'
+  background: '#F5FAFF'
+  on-background: '#0D2137'
+  surface-variant: '#D3E3F0'
 typography:
   display-lg:
     fontFamily: Playfair Display
@@ -134,44 +134,44 @@ spacing:
   gutter-mobile: 1.25rem
   gutter-tablet: 2rem
   max-content-width: 480px
-# Product accents (not in M3 frontmatter; required by prose)
-# accent-gold: '#D4AF77'
-# accent-blush: '#E8B49B'
+# Product accents (baby blue variations)
+# accent-sky: '#87CEEB'
+# accent-powder: '#B0E0E6'
 ---
 
 ## Brand & Style
 
-This design system expresses quiet intimacy, memory preservation, and tactile warmth. Tailored specifically for a shared sanctuary between two lifelong friends, the visual language avoids the frantic gamification and visual clutter of public social networks. Instead, it draws from editorial journals, physical scrapbooks, and archival stationery.
+This design system expresses calm serenity, memory preservation, and soothing tranquility. Tailored specifically for a shared sanctuary between two lifelong friends, the visual language avoids the frantic gamification and visual clutter of public social networks. Instead, it draws from clear skies, gentle waters, and peaceful cloud-like softness.
 
-The design philosophy combines **Minimalism** with **Tactile / Skeuomorphic** nuances:
-- Generous cream-toned negative space allowing photos and private thoughts to breathe.
-- Subtle physical metaphors: deckle edges, archival photo tabs, polaroid-inspired frame ratios, and washi-tape fasteners without skeuomorphic excess.
-- Gentle micro-interactions that mimic paper turning, physical stamp placement, and ink settling.
-- Emotionally reassuring, private, and slow-paced: every visual element honors presence over engagement metrics.
+The design philosophy combines **Minimalism** with **Soft / Airy** nuances:
+- Generous sky-toned negative space allowing photos and private thoughts to breathe.
+- Subtle natural metaphors: soft clouds, gentle waves, clear horizons, and flowing transitions without harsh edges.
+- Gentle micro-interactions that mimic rippling water, drifting clouds, and settling mist.
+- Emotionally calming, private, and peaceful: every visual element honors presence over engagement metrics.
 
 ## Colors
 
-The color palette anchors to organic materials: sun-bleached linen, aged parchment, raw terracotta pottery, pressed botanical sage, and deep roasted espresso. It strictly utilizes warm color temperatures to avoid clinical, digital coldness.
+The color palette anchors to serene sky-inspired elements: gentle morning skies, soft clouds, crystalline waters, and peaceful horizons. It utilizes cool, calming color temperatures to create a soothing, tranquil atmosphere.
 
 ### Palette Roles & Values
-- **Backgrounds (Parchment & Vellum)**:
-  - Base canvas: `#FAF7F2` (Sunlit Linen)
-  - Card & sheet surfaces: `#F4EFE6` (Pressed Parchment)
-  - Recessed / muted layers: `#EFE8DC` (Archival Kraft)
-- **Primary (Terracotta / Hearth)**:
-  - Primary Base: `#C86446` (Terracotta) — used for active states, key interactive moments, emotive milestones.
-  - Primary Hover / Pressed: `#D97455` (Warm Clay)
-- **Secondary (Muted Botanical)**:
-  - Secondary Base: `#6D8777` (Dried Sage) — serves as the counterpart's presence indicator, collaborative statuses, and botanical accents.
-  - Secondary Light: `#859F8F` (Eucalyptus Tint)
-- **Tertiary & Warm Accents**:
-  - Dusty Gold: `#D4AF77` (Antique Brass) — memories, pinned moments, shared streaks, and celebration badges.
-  - Warm Blush: `#E8B49B` (Pressed Petal) — subtle reaction bubbles and emotional tags.
-- **Typography & Neutrals (Charcoal Espresso)**:
-  - Text Primary: `#2C2825` (Roasted Espresso) — deep, readable, non-harsh alternative to pure black.
-  - Text Secondary: `#4A443E` (Muted Umber) — timestamps, metadata, bylines.
-  - Text Tertiary / Disabled: `#7A7268` (Aged Driftwood) — placeholder states, subtle borders.
-  - Border Hairline: `rgba(44, 40, 37, 0.08)`
+- **Backgrounds (Sky & Cloud)**:
+  - Base canvas: `#F5FAFF` (Morning Sky)
+  - Card & sheet surfaces: `#EEF6FC` (Soft Cloud)
+  - Recessed / muted layers: `#E5F1FA` (Misty Horizon)
+- **Primary (Baby Blue / Sky)**:
+  - Primary Base: `#7EB8E1` (Baby Blue) — used for active states, key interactive moments, emotive milestones.
+  - Primary Hover / Pressed: `#6AA8D8` (Clear Sky)
+- **Secondary (Ocean Tint)**:
+  - Secondary Base: `#6AA8D8` (Ocean Blue) — serves as the counterpart's presence indicator, collaborative statuses, and water accents.
+  - Secondary Light: `#8FC4E8` (Seafoam Tint)
+- **Tertiary & Cool Accents**:
+  - Sky Blue: `#87CEEB` (Clear Horizon) — memories, pinned moments, shared streaks, and celebration badges.
+  - Powder Blue: `#B0E0E6` (Morning Mist) — subtle reaction bubbles and emotional tags.
+- **Typography & Neutrals (Deep Navy)**:
+  - Text Primary: `#0D2137` (Deep Ocean) — deep, readable, non-harsh alternative to pure black.
+  - Text Secondary: `#3D5875` (Twilight Blue) — timestamps, metadata, bylines.
+  - Text Tertiary / Disabled: `#6B8DAD` (Gentle Wave) — placeholder states, subtle borders.
+  - Border Hairline: `rgba(13, 33, 55, 0.08)`
 
 ## Typography
 
@@ -195,17 +195,17 @@ The layout is built specifically for a focused, private two-person experience. R
 
 ## Elevation & Depth
 
-Visual depth avoids cold, synthetic Material Design drop shadows in favor of organic paper layering and soft ambient diffuse light.
+Visual depth uses soft, cloud-like layering with gentle blue-tinted shadows for an airy, floating effect.
 
-- **Layer 0 (App Canvas)**: The base desk or open journal backing in `#FAF7F2`.
-- **Layer 1 (The Page / Card)**: `#F4EFE6` lifted by a delicate diffuse paper shadow:
-  - `box-shadow: 0 2px 8px -2px rgba(44, 40, 37, 0.05), 0 8px 24px -4px rgba(44, 40, 37, 0.07)`
-  - Edge treatment: `1px solid rgba(44, 40, 37, 0.06)`
-- **Layer 2 (Polaroids & Memories)**: Physical prints pinned to the page:
-  - `box-shadow: 0 4px 12px -2px rgba(44, 40, 37, 0.08), 0 12px 32px -4px rgba(44, 40, 37, 0.1)`
+- **Layer 0 (App Canvas)**: The base sky canvas in `#F5FAFF`.
+- **Layer 1 (The Page / Card)**: `#EEF6FC` lifted by a delicate diffuse cloud shadow:
+  - `box-shadow: 0 2px 8px -2px rgba(13, 33, 55, 0.06), 0 8px 24px -4px rgba(13, 33, 55, 0.08)`
+  - Edge treatment: `1px solid rgba(13, 33, 55, 0.06)`
+- **Layer 2 (Photos & Memories)**: Floating cards gently elevated:
+  - `box-shadow: 0 4px 12px -2px rgba(13, 33, 55, 0.09), 0 12px 32px -4px rgba(13, 33, 55, 0.11)`
   - Rotation: Subtle accidental tilt (`-1.5deg` to `+1.5deg`) for organic presence.
-- **Layer 3 (Modals & Sheet Overlays)**: Bottom drawers mimicking pulling a fresh stationery card from an envelope:
-  - `box-shadow: 0 -8px 32px -4px rgba(44, 40, 37, 0.12)`
+- **Layer 3 (Modals & Sheet Overlays)**: Bottom drawers floating up like rising clouds:
+  - `box-shadow: 0 -8px 32px -4px rgba(13, 33, 55, 0.13)`
 
 ## Shapes
 
@@ -219,26 +219,26 @@ The shape vocabulary blends hand-cut paper softness with modern ergonomics.
 ## Components
 
 ### Buttons
-- **Primary Action (Wax Seal / Terracotta)**: Solid `#C86446` with `#FAF7F2` text, `48px` minimum touch target, `rounded-full`, subtly raised with a warm shadow (`0 4px 12px rgba(200, 100, 70, 0.25)`). Active state scales slightly to `0.98`.
-- **Secondary (Sage Leaf)**: Outline or soft tint `#6D8777` with `1.5px` border in `#6D8777`, transparent background, or `rgba(109, 135, 119, 0.1)` fill.
-- **Ghost / Journal Note**: Pure text in `#4A443E`, accompanied by a fine terracotta underline or small serif bullet.
+- **Primary Action (Sky Button)**: Solid `#7EB8E1` with `#ffffff` text, `48px` minimum touch target, `rounded-full`, subtly raised with a cool shadow (`0 4px 12px rgba(126, 184, 225, 0.25)`). Active state scales slightly to `0.98`.
+- **Secondary (Ocean Tint)**: Outline or soft tint `#6AA8D8` with `1.5px` border in `#6AA8D8`, transparent background, or `rgba(106, 168, 216, 0.1)` fill.
+- **Ghost / Subtle Note**: Pure text in `#3D5875`, accompanied by a fine sky-blue underline or small serif bullet.
 
-### Cards & Scrapbook Entries
-- **Memory Card**: `#F4EFE6` surface with `18px` rounded corners, border `1px solid rgba(44, 40, 37, 0.06)`. Internal padding `20px`.
-- **Polaroid Frame**: Pure white `#FFFFFF` or pale linen `#FAF7F2` card containing an inner media container with `4px` radius, followed by an italic caption line beneath.
-- **Friend Duality Badge**: Small dual-avatar indicator at the card head: terracotta border for the user, sage border for the best friend, linked by a dotted hairline.
+### Cards & Memory Entries
+- **Memory Card**: `#EEF6FC` surface with `18px` rounded corners, border `1px solid rgba(13, 33, 55, 0.06)`. Internal padding `20px`.
+- **Photo Frame**: Pure white `#FFFFFF` or pale sky `#F5FAFF` card containing an inner media container with `4px` radius, followed by an italic caption line beneath.
+- **Friend Duality Badge**: Small dual-avatar indicator at the card head: sky-blue border for the user, ocean-blue border for the best friend, linked by a dotted hairline.
 
 ### Inputs & Fields
-- **Thought Composer**: Borderless parchment fields mimicking writing directly onto a diary sheet. Active state indicated by a subtle warm-rust left rule (`2px solid #C86446`).
-- **Standard Inputs**: `#FAF7F2` background, `1px solid rgba(44, 40, 37, 0.14)` resting border, focusing to `1.5px solid #C86446` with no glow ring.
+- **Thought Composer**: Borderless sky-tinted fields mimicking writing on a cloud. Active state indicated by a subtle sky-blue left rule (`2px solid #7EB8E1`).
+- **Standard Inputs**: `#F5FAFF` background, `1px solid rgba(13, 33, 55, 0.14)` resting border, focusing to `1.5px solid #7EB8E1` with no glow ring.
 
 ### Chips & Tags
-- **Pressed Flowers / Washi Strips**: Soft tint fills (`#E8B49B` blush or `#D4AF77` gold at 25% opacity), `rounded-md`, uppercase `label-sm` tracking with a small paperclip or tape icon.
+- **Cloud Tags / Floating Labels**: Soft tint fills (`#B0E0E6` powder or `#87CEEB` sky at 25% opacity), `rounded-md`, uppercase `label-sm` tracking with a small cloud or wave icon.
 
 ### Selection Controls
-- **Checkboxes**: Custom hand-drawn appearance; checked state fills with terracotta and renders a delicate checkmark.
-- **Radio Buttons**: Concentric circles with `#C86446` inner dot and warm parchment spacer.
+- **Checkboxes**: Custom soft appearance; checked state fills with baby blue and renders a delicate checkmark.
+- **Radio Buttons**: Concentric circles with `#7EB8E1` inner dot and soft sky spacer.
 
 ### Specialty App Components
-- **Presence Bookmark**: A tiny hanging ribbon at the top navigation bar showing friend’s status (e.g., "Mia is reading page 12" or "Mia left a voice note").
-- **Voice Memo Cassette / Stamp**: Audio notes styled as vintage stamps with waveform notches, tinted in secondary sage `#6D8777`.
+- **Presence Bookmark**: A tiny floating cloud at the top navigation bar showing friend's status (e.g., "Mia is viewing page 12" or "Mia left a voice note").
+- **Voice Memo / Audio Stamp**: Audio notes styled as soft cloud badges with waveform notches, tinted in secondary ocean `#6AA8D8`.
