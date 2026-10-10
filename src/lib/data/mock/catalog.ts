@@ -165,6 +165,90 @@ export const SEED_PREGUNTAS_ESTO: PreguntaJuego[] = [
   },
 ]
 
+/** Preguntas para conectar (36 preguntas estilo). */
+export const SEED_PREGUNTAS_CONECTAR: PreguntaJuego[] = [
+  {
+    id: "pc-01",
+    juego: "36-preguntas",
+    texto: "¿Cuál es tu recuerdo favorito de nuestra amistad hasta ahora?",
+    opcionA: "",
+    opcionB: "",
+    peso: 3,
+  },
+  {
+    id: "pc-02",
+    juego: "36-preguntas",
+    texto: "Si pudieras revivir un día de tu vida, ¿cuál sería y por qué?",
+    opcionA: "",
+    opcionB: "",
+    peso: 2,
+  },
+  {
+    id: "pc-03",
+    juego: "36-preguntas",
+    texto: "¿Qué es algo que siempre quisiste hacer pero nunca te animaste?",
+    opcionA: "",
+    opcionB: "",
+    peso: 2,
+  },
+  {
+    id: "pc-04",
+    juego: "36-preguntas",
+    texto: "¿Cuál fue el momento en que te sentiste más orgullosa de vos misma?",
+    opcionA: "",
+    opcionB: "",
+    peso: 3,
+  },
+  {
+    id: "pc-05",
+    juego: "36-preguntas",
+    texto: "Si pudieras cambiar algo de cómo te criaron, ¿qué sería?",
+    opcionA: "",
+    opcionB: "",
+    peso: 3,
+  },
+  {
+    id: "pc-06",
+    juego: "36-preguntas",
+    texto: "¿Qué significa para vos una amistad verdadera?",
+    opcionA: "",
+    opcionB: "",
+    peso: 3,
+  },
+  {
+    id: "pc-07",
+    juego: "36-preguntas",
+    texto: "¿Cuál es tu mayor miedo en las relaciones cercanas?",
+    opcionA: "",
+    opcionB: "",
+    peso: 3,
+  },
+  {
+    id: "pc-08",
+    juego: "36-preguntas",
+    texto: "¿Qué cualidad admirás más en las personas que te rodean?",
+    opcionA: "",
+    opcionB: "",
+    peso: 2,
+  },
+  {
+    id: "pc-09",
+    juego: "36-preguntas",
+    texto: "Si supieras que en un año ya no estarías, ¿qué cambiarías de tu vida hoy?",
+    opcionA: "",
+    opcionB: "",
+    peso: 3,
+  },
+  {
+    id: "pc-10",
+    juego: "36-preguntas",
+    texto: "¿Cuál es el mejor consejo que recibiste y quién te lo dio?",
+    opcionA: "",
+    opcionB: "",
+    peso: 2,
+  },
+]
+
 export const SEED_INSIGNIAS: Insignia[] = [
   {
     id: "ins-primera",

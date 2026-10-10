@@ -9,6 +9,7 @@ import type {
 import {
   SEED_INSIGNIAS,
   SEED_INTERESES,
+  SEED_PREGUNTAS_CONECTAR,
   SEED_PREGUNTAS_ESTO,
   SEED_PROMPTS,
   buildCurrentReto,
@@ -283,7 +284,7 @@ export function createEmptyDatabase(): MockDatabase {
     intereses: [...SEED_INTERESES],
     prompts: [...SEED_PROMPTS],
     respuestasPrompt: [],
-    preguntasJuego: [...SEED_PREGUNTAS_ESTO],
+    preguntasJuego: [...SEED_PREGUNTAS_ESTO, ...SEED_PREGUNTAS_CONECTAR],
     respuestasJuego: [],
     swipes: [],
     matches: [],
