@@ -183,6 +183,14 @@ export const SEED_PREGUNTAS_CONECTAR: PreguntaJuego[] = [
     opcionB: "",
     peso: 2,
   },
+  {
+    id: "pc-03",
+    juego: "36-preguntas",
+    texto: "¿Qué es algo que siempre quisiste hacer pero nunca te animaste?",
+    opcionA: "",
+    opcionB: "",
+    peso: 2,
+  },
 ]
 
 export const SEED_INSIGNIAS: Insignia[] = [
