@@ -215,6 +215,14 @@ export const SEED_PREGUNTAS_CONECTAR: PreguntaJuego[] = [
     opcionB: "",
     peso: 3,
   },
+  {
+    id: "pc-07",
+    juego: "36-preguntas",
+    texto: "¿Cuál es tu mayor miedo en las relaciones cercanas?",
+    opcionA: "",
+    opcionB: "",
+    peso: 3,
+  },
 ]
 
 export const SEED_INSIGNIAS: Insignia[] = [
