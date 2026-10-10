@@ -199,6 +199,14 @@ export const SEED_PREGUNTAS_CONECTAR: PreguntaJuego[] = [
     opcionB: "",
     peso: 3,
   },
+  {
+    id: "pc-05",
+    juego: "36-preguntas",
+    texto: "Si pudieras cambiar algo de cómo te criaron, ¿qué sería?",
+    opcionA: "",
+    opcionB: "",
+    peso: 3,
+  },
 ]
 
 export const SEED_INSIGNIAS: Insignia[] = [
