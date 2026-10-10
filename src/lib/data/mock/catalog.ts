@@ -223,6 +223,14 @@ export const SEED_PREGUNTAS_CONECTAR: PreguntaJuego[] = [
     opcionB: "",
     peso: 3,
   },
+  {
+    id: "pc-08",
+    juego: "36-preguntas",
+    texto: "¿Qué cualidad admirás más en las personas que te rodean?",
+    opcionA: "",
+    opcionB: "",
+    peso: 2,
+  },
 ]
 
 export const SEED_INSIGNIAS: Insignia[] = [
