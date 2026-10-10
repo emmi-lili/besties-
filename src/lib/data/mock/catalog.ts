@@ -207,6 +207,14 @@ export const SEED_PREGUNTAS_CONECTAR: PreguntaJuego[] = [
     opcionB: "",
     peso: 3,
   },
+  {
+    id: "pc-06",
+    juego: "36-preguntas",
+    texto: "¿Qué significa para vos una amistad verdadera?",
+    opcionA: "",
+    opcionB: "",
+    peso: 3,
+  },
 ]
 
 export const SEED_INSIGNIAS: Insignia[] = [
