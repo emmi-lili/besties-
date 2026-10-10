@@ -175,6 +175,14 @@ export const SEED_PREGUNTAS_CONECTAR: PreguntaJuego[] = [
     opcionB: "",
     peso: 3,
   },
+  {
+    id: "pc-02",
+    juego: "36-preguntas",
+    texto: "Si pudieras revivir un día de tu vida, ¿cuál sería y por qué?",
+    opcionA: "",
+    opcionB: "",
+    peso: 2,
+  },
 ]
 
 export const SEED_INSIGNIAS: Insignia[] = [
