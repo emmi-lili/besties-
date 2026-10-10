@@ -165,6 +165,18 @@ export const SEED_PREGUNTAS_ESTO: PreguntaJuego[] = [
   },
 ]
 
+/** Preguntas para conectar (36 preguntas estilo). */
+export const SEED_PREGUNTAS_CONECTAR: PreguntaJuego[] = [
+  {
+    id: "pc-01",
+    juego: "36-preguntas",
+    texto: "¿Cuál es tu recuerdo favorito de nuestra amistad hasta ahora?",
+    opcionA: "",
+    opcionB: "",
+    peso: 3,
+  },
+]
+
 export const SEED_INSIGNIAS: Insignia[] = [
   {
     id: "ins-primera",
