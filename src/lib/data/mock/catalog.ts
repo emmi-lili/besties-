@@ -239,6 +239,14 @@ export const SEED_PREGUNTAS_CONECTAR: PreguntaJuego[] = [
     opcionB: "",
     peso: 3,
   },
+  {
+    id: "pc-10",
+    juego: "36-preguntas",
+    texto: "¿Cuál es el mejor consejo que recibiste y quién te lo dio?",
+    opcionA: "",
+    opcionB: "",
+    peso: 2,
+  },
 ]
 
 export const SEED_INSIGNIAS: Insignia[] = [
